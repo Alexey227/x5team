@@ -7,5 +7,6 @@ public class task8a {
                 sum += number[i];
         }
         System.out.println("Сумма положительных элементов: " + sum);
+
     }
 }

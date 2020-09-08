@@ -1,19 +1,18 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) throws Exception {
+        System.out.println("Введите трехзначное число и будет выведена сумма значений числа: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int number =Integer.parseInt(reader.readLine());
-        String s = "" + number;
-        char a[] = s.toCharArray();
+        int a = Integer.parseInt(reader.readLine());
         int b = 0;
-        int len = a.length;
-        for (int i = 0; i < len; i++) {
-            int t = (int) a[i] - 48;
-            b = b + t;
+        while (a > 0) {
+            b += a % 10;
+            a /= 10;
         }
-        System.out.println(b);
+        System.out.println("Сумма значений числа: " + b);
     }
 }
 
